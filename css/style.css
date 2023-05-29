@@ -1,86 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
 body{
-    background: linear-gradient(#f2f2f2, #ffffff) ;
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background-color: var(--snow);
+}
+
+:root{
+    --white: #fff;
+    --ghostwhite: #F8F8FF;
+    --whitesmoke: #F5F5F5;
+    --magnolia: #F8F4FF;
+    --snow: #FFFAFA;
+    --black: #0b0b0b;
+    --blacked: #4f4f4f;
+    --strong: #b9016c;
 }
 
 /* Header */
-.menu-bar{
+header{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-around; /* distancia uma tag (img) de outra (nav) */
-    padding: 10px;
-    border-bottom: 0.5px solid #000000;
+    padding: 1rem;
+    background-color: var(--whitesmoke);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-height: 50px;
 }
-.logo-image{
-    height: 60px;
+.box-logo{
+    height: 100%;
+}
+.image-logo{
+    max-width: 60px;
+    height: 100%;
 }
 .menu-icons{
     display: flex;
-    gap: 40px;
-}
-
-/* Principal content */
-.content{
-    margin: 30px 0;
-}
-
-/* 1° Block */
-.main-content{
-    display: flex;
-    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 30px;
-}
-.principal-image{
-    height: 350px;
-}
-.text-about-me{
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-.text-about-me h3{
-    font-size: 25px;
-}
-.linkedin-github{
-    height: 50px;
-    display: flex;
-    align-items: center;
-    gap: 20px;
     justify-content: center;
 }
-.linkedin-github i{
-    font-size: 30px;
-    cursor: pointer;
+.iten-menu-chapters{
+    text-decoration: none;
+    color: var(--black);
 }
-.linkedin-github i:hover{
-    color: #161414;
-    font-size: 33px;
+.iten-menu-chapters:hover{
+    text-decoration: underline;
+    color: var(--blacked);
+    transition: .3s;
 }
 
-/* 2° Block */
-.description-content{
+/* Gerneral Content */
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section{
+    padding: 2rem;
+}
+strong{
+    color: var(--strong);
+}
+
+/* 1° Block - About Me */
+.main-content{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 500px;
+}
+.text-about-me{
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+h1{
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+.box-image{
+    max-width: 350px
+}
+.principal-image{
+    width: 100%;
+}
+
+/* 2° Block - Projects */
+.projects-content{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: var(--whitesmoke);
 }
-.h2-projects{
-    border-top: 0.5px solid #000000;
-    padding-top: 20px;
+h3{
+    letter-spacing: 2px;
 }
-.cards-projects{
-    width: 100vw;
+
+/* 3° Block - Contact */
+.contact-content{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 2rem;
 }
-.footer-main{
-    border-top: 0.5px solid #000000;
-    padding-top: 10px;
+.contact-content > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.linkedin-github a{
+    color: var(--black);
+}
+.linkedin-github a:hover{
+    color: var(--blacked);
+}
+
+/* Footer */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--whitesmoke);
+    padding: 2rem;
 }
 .banner{
-    max-height: 70px;
-    width: 100vw;
+    max-width: 300px;
+    
 }
