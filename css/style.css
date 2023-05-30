@@ -8,14 +8,34 @@ body{
 }
 
 :root{
-    --white: #fff;
-    --ghostwhite: #F8F8FF;
-    --whitesmoke: #F5F5F5;
-    --magnolia: #F8F4FF;
-    --snow: #FFFAFA;
-    --black: #0b0b0b;
-    --blacked: #4f4f4f;
-    --strong: #b9016c;
+    --whitesmoke: #F5F5F5; /* background color 1 */
+    --snow: #FFFAFA; /* background color 2 */
+
+    --dark: #000000; /* h1, h2 e h3 */
+    --fonthover: #0b0b0b; /* a href hover */
+    --prehoverfont: #4f4f4f; /* a href */
+    --counter: #ff0095; /* tag strong */
+}
+
+/* Gerneral Content */
+.change-theme{
+    --whitesmoke: #1d000d;
+    --snow: #0d0406;
+
+    --dark: #ffffff;
+    --fonthover: #fbfbfb;
+    --prehoverfont: #9c9c9c;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section{
+    padding: 2rem;
+}
+strong{
+    color: var(--counter);
 }
 
 /* Header */
@@ -27,6 +47,7 @@ header{
     flex-wrap: wrap;
     justify-content: space-evenly;
     min-height: 50px;
+    gap: 2rem;
 }
 .box-logo{
     height: 100%;
@@ -44,25 +65,18 @@ header{
 }
 .iten-menu-chapters{
     text-decoration: none;
-    color: var(--black);
+    color: var(--prehoverfont);
 }
 .iten-menu-chapters:hover{
     text-decoration: underline;
-    color: var(--blacked);
+    color: var(--fonthover);
     transition: .3s;
 }
-
-/* Gerneral Content */
-main{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.dark-bright-mode{
+    cursor: pointer;
 }
-section{
-    padding: 2rem;
-}
-strong{
-    color: var(--strong);
+.moon{
+    height: 25px;
 }
 
 /* 1° Block - About Me */
@@ -81,12 +95,17 @@ strong{
 h1{
     font-size: 2rem;
     letter-spacing: 2px;
+    color: var(--dark);
+}
+.text-about-me p{
+    color: var(--dark);
 }
 .box-image{
     max-width: 350px
 }
 .principal-image{
-    width: 100%;
+    width: 100%;border-radius: 50%;
+    box-shadow: 1px 1px 3px 1px var(--counter);
 }
 
 /* 2° Block - Projects */
@@ -96,11 +115,28 @@ h1{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 4rem;
+    padding: 4rem 0;
     background-color: var(--whitesmoke);
 }
-h3{
-    letter-spacing: 2px;
+h2{
+    color: var(--dark);
+}
+#api-projects{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 500px;
+}
+#api-projects a{
+    text-decoration: none;
+    color: var(--prehoverfont);
+}
+#api-projects a:hover{
+    color: var(--fonthover);
+    transition: .3s;
 }
 
 /* 3° Block - Contact */
@@ -116,11 +152,16 @@ h3{
     gap: 2rem;
     flex-wrap: wrap;
 }
+h3{
+    color: var(--dark);
+    letter-spacing: 2px;
+}
 .linkedin-github a{
-    color: var(--black);
+    color: var(--prehoverfont);
 }
 .linkedin-github a:hover{
-    color: var(--blacked);
+    color: var(--fonthover);
+    transition: .3s;
 }
 
 /* Footer */
@@ -132,6 +173,8 @@ footer{
     padding: 2rem;
 }
 .banner{
-    max-width: 300px;
-    
+    max-width: 300px;   
+}
+footer p{
+    cursor: default;
 }
