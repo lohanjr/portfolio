@@ -38,8 +38,8 @@ let themeMode = document.getElementById('icon');
 icon.onclick = function(){
     document.body.classList.toggle("change-theme");
     if(document.body.classList.contains("change-theme")){
-        themeMode.src = "../imgs/whiteSunTransparent.svg";
+        themeMode.src = "imgs/whiteSunTransparent.svg";
     } else{
-        themeMode.src = "../imgs/moonTransparentFigma.svg";
+        themeMode.src = "imgs/moonTransparentFigma.svg";
     }
 }
