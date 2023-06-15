@@ -30,16 +30,3 @@ function showProjects(data){ // Função para apropiar nomes, descrições e url
 }
 
 GetProjects();
-
-// Dark / Bright Mode
-
-let themeMode = document.getElementById('icon');
-
-icon.onclick = function(){
-    document.body.classList.toggle("change-theme");
-    if(document.body.classList.contains("change-theme")){
-        themeMode.src = "imgs/whiteSunTransparent.svg";
-    } else{
-        themeMode.src = "imgs/moonTransparentFigma.svg";
-    }
-}
