@@ -32,7 +32,7 @@ main{
     gap: 2rem;
 }
 section{
-    padding: 2rem;
+    padding: 0 2rem;
 }
 strong{
     color: var(--counter);
@@ -146,7 +146,7 @@ li a:hover{
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    min-height: 500px;
+    height: 100vh;
 }
 
 .text-about-me{
@@ -183,14 +183,18 @@ h1{
 
 /* 2° Block - Projects */
 .projects-content{
+    background-color: var(--whitesmoke);
+    height: 100vh;
+    display: flex;
+}
+.all-projects-div{
     display: flex;
     flex-direction: column;
+    gap: 4rem;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4rem;
-    padding: 4rem 0;
-    background-color: var(--whitesmoke);
+    margin: auto;
 }
 h2{
     color: var(--dark);
@@ -216,20 +220,25 @@ h2{
 
 /* 3° Block - Contact */
 .contact-content{
+    height: 100vh;
+    display: flex;
+}
+.all-contact-div{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-}
-.contact-content > div{
-    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
     flex-wrap: wrap;
+    margin: auto;
 }
 h3{
     color: var(--dark);
     letter-spacing: 2px;
+}
+.linkedin-github{
+    display: flex;
+    gap: 2rem;
 }
 .linkedin-github i{
     color: var(--prehoverfont);
